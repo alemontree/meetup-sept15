@@ -4,18 +4,19 @@ import os
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
+import credentials
 
 # twitter api wrapper
 import tweepy
 
-consumer_key = os.environ['consumer_key']
-consumer_secret = os.environ['consumer_secret']
-access_token = os.environ['access_token']
-access_token_secret = os.environ['access_secret']
+consumer_key = credentials.consumer_key
+consumer_secret = credentials.consumer_secret
+access_key = credentials.access_key
+access_secret = credentials.access_secret
 
 # get mah tweets
 def download_tweets():
-    username = "your_username_here"
+    username = "mishnayder"
     
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
